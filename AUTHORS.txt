@@ -1,0 +1,6 @@
+Here is an inevitably incomplete list of MUCH-APPRECIATED CONTRIBUTORS --
+people who have submitted patches, reported bugs, added translations, helped
+answer newbie questions, and generally made PyRzCtl that much better:
+
+Gürkan Karadağ https://github.com/Gurkankaradag0/
+Sadmeme https://github.com/Sadmeme/
