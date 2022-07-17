@@ -13,24 +13,24 @@ pip install https://github.com/Gurkankaradag0/pyrzctl/archive/refs/heads/main.zi
 
 ## Usage
 ```python
-        import pyrzctl
+import pyrzctl
 
-        if not pyrzctl.init(): # Initialize the RzCtl module. (when you do not do this, the mouse functions will not work.)
-            print('Failed to initialize pyrzctl.')
+if not pyrzctl.init(): # Initialize the RzCtl module. (when you do not do this, the mouse functions will not work.)
+    print('Failed to initialize pyrzctl.')
 
-        sWidth, sHeight = pyrzctl.size() # Returns two integers, the width and height of the screen. (The primary monitor, in multi-monitor setups.)
-        x, y = pyrzctl.position() # Returns two integers, the x and y of the mouse cursor's current position.
-        pyrzctl.moveTo(1080, 50) # Move the mouse to the x, y coordinates 1080, 50.
-        pyrzctl.click() # Click the mouse at its current location.
-        pyrzctl.click(500, 500) # Click the mouse at the x, y coordinates 500, 500.
-        pyrzctl.move(None, 10) # Move mouse 10 pixels down, that is, move the mouse relative to its current position.
-        pyrzctl.moveTo(1080, 50, duration=2) # Move mouse over 2 seconds.
-        pyrzctl.dragTo(1080, 500) # Drag the mouse on the x, y coordinates 1080, 500.
-        pyrzctl.drag(None, 10) # Drag the mouse 10 pixels down, that is, drag the mouse relative to its current position.
-        pyrzctl.doubleClick() # Double click the mouse at the current position.
-        pyrzctl.rightClick() # Right click the mouse at the current position.
-        pyrzctl.middleClick() # Middle click the mouse at the current position.
-        pyrzctl.tripleClick() # Triple click the mouse at the current position.
+sWidth, sHeight = pyrzctl.size() # Returns two integers, the width and height of the screen. (The primary monitor, in multi-monitor setups.)
+x, y = pyrzctl.position() # Returns two integers, the x and y of the mouse cursor's current position.
+pyrzctl.moveTo(1080, 50) # Move the mouse to the x, y coordinates 1080, 50.
+pyrzctl.click() # Click the mouse at its current location.
+pyrzctl.click(500, 500) # Click the mouse at the x, y coordinates 500, 500.
+pyrzctl.move(None, 10) # Move mouse 10 pixels down, that is, move the mouse relative to its current position.
+pyrzctl.moveTo(1080, 50, duration=2) # Move mouse over 2 seconds.
+pyrzctl.dragTo(1080, 500) # Drag the mouse on the x, y coordinates 1080, 500.
+pyrzctl.drag(None, 10) # Drag the mouse 10 pixels down, that is, drag the mouse relative to its current position.
+pyrzctl.doubleClick() # Double click the mouse at the current position.
+pyrzctl.rightClick() # Right click the mouse at the current position.
+pyrzctl.middleClick() # Middle click the mouse at the current position.
+pyrzctl.tripleClick() # Triple click the mouse at the current position.
 ```
 
 ## Donate
