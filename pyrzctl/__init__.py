@@ -6,7 +6,7 @@
 # TODO - the following features are half-implemented right now:
 # primary secondary mouse button awareness
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 import sys
 import time
@@ -333,7 +333,7 @@ def click(
     x, y = position()
 
   _mouseMoveDrag("move", x, y, 0, 0, duration, tween)
-
+  time.sleep(0.007)
   for i in range(clicks):
     failSafeCheck()
     if button in (LEFT, MIDDLE, RIGHT):
