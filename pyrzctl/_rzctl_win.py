@@ -79,11 +79,14 @@ def _moveTo(x, y):
   Returns:
     None
   """
-  width, height = _size()
-  convertedX = 65536 * x // width + 1
-  convertedY = 65536 * y // height + 1
+  # TODO: ARG! For some reason the razer service does not move the mouse for the secondary monitor. I'm switching to using the older SetCursorPos win32 function.
+  # width, height = _size()
+  # convertedX = 65536 * x // width + 1
+  # convertedY = 65536 * y // height + 1
 
-  Crzctl.move(convertedX, convertedY, False)
+  # Crzctl.move(convertedX, convertedY, False)
+
+  ctypes.windll.user32.SetCursorPos(x, y)
 
 def _mouseDown(x, y, button):
   """Send the mouse down event to Windows by calling the mouse_event() win32
@@ -176,9 +179,12 @@ def _sendMouseEvent(ev, x, y, dwData=0):
   """
   assert x != None and y != None, 'x and y cannot be set to None'
 
-  width, height = _size()
-  convertedX = 65536 * x // width + 1
-  convertedY = 65536 * y // height + 1
+  # TODO: ARG! For some reason the razer service does not move the mouse for the secondary monitor. I'm switching to using the older SetCursorPos win32 function.
+  # width, height = _size()
+  # convertedX = 65536 * x // width + 1
+  # convertedY = 65536 * y // height + 1
 
-  Crzctl.move(convertedX, convertedY, False)
+  # Crzctl.move(convertedX, convertedY, False)
+
+  ctypes.windll.user32.SetCursorPos(x, y)
   Crzctl.click(ev)
